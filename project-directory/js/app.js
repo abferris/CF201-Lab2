@@ -157,7 +157,7 @@ for (var j=6; j>0; j--){
    for (var k=0; k<foods.length; k++){
       //log foods checked against
       console.log('test',foods[k]);
-      if ( ansSeven === foods[k] ) {/
+      if ( ansSeven === foods[k] ) {
    alert('Correct!');
    score ++; 
    j=0;// end first for loop
