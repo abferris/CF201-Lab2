@@ -16,6 +16,8 @@ var score = 0;
 var questions = 0;
 var foods = ['PESTO', 'PESTO PASTA', 'GARLIC BREAD', 'RED WINE', 'WINE'];
 
+function questionOne() {
+
 //question 1
 var ansOne = prompt('Question One: My name is Aaron Blake Ferris. Is this true? Yes or no?' ).toUpperCase(); 
 console.log('Answer 1',ansOne); 
@@ -35,6 +37,10 @@ if (ansOne === 'YES' || ansOne === 'Y'){
 //STRING INTERPOLATION help from Billy who got it from code academy
  alert(`${resultOne} Yes it is.`); 
 //end question 1
+}
+questionOne();
+
+function questionTwo() {
 
 //question 2
  var ansTwo = prompt('Question Two: I am the oldest of three children. Is this true? Yes or no?').toUpperCase(); 
@@ -54,6 +60,10 @@ if (ansTwo === 'YES' || ansTwo === 'Y'){
   console.log('Result 2', resultTwo);
   alert(`${resultTwo} No. I am the youngest of three.`);
   //end question 2
+}
+questionTwo();
+
+function questionThree() {
 
  //question 3
  var ansThree = prompt('Question Three: My two older brothers are named Drew and Reed. As my father and grandmother are both teachers, I was almost named Wright. Is this true? Yes or no?').toUpperCase(); 
@@ -74,6 +84,10 @@ if (ansThree === 'YES' || ansThree === 'Y'){
  
   alert(`${resultThree} Yes. Thank goodness they decided otherwise, which kept me from much childhood teasing. Now Key and Peel have opened that can of worms for my name`);
   //end question 3
+}
+questionThree();
+
+function questionFour() {
 
  //question 4
  var ansFour = prompt('Question Four: I have played ultimate at a competitive level, known as club. I also currently enjoy giving back to the ultimate community by coaching teams my at alma mater Eckstein Middle School. Is this true? Yes or no?').toUpperCase(); 
@@ -94,6 +108,10 @@ if (ansFour === 'YES' || ansFour === 'Y'){
 
  alert(`${resultFour} No. Unfortunatly life gets in the way. Codefellows is busy enough that I do not have the time to commit to something like that during the school day. You should know that!`); 
  //end question 4
+}
+questionFour();
+
+function questionFive() {
 
  //question 5
  var ansFive = prompt('Question Five: I play Dungeons and Dragons! I prefer to play hack and slash fighting characters to make things as simple as possible. Is this true? Yes or no?').toUpperCase(); 
@@ -114,6 +132,10 @@ if (ansFive === 'YES' || ansFive === 'Y'){
 
   alert(`${resultFive} No. If you know anything about me, I am a glutton for punishment! I enjoy playing magic-users, as knowing and managing your spells is often more complex and difficult. However dumb characters can be played in VERY fun ways.`); 
   //end question 5
+}
+questionFive();
+
+function questionSix() {
 
   //question 6
 //loop for attempts
@@ -145,6 +167,10 @@ for(var i=4; i>0; i--) {
 }
 questions ++;
 //end question 6
+}
+questionSix();
+
+function questionSeven() {
 
 //question 7
 // counter
@@ -165,6 +191,8 @@ for (var j=6; j>0; j--){
    }
 }
 //end questions 7
+}
+questionSeven();
 
 // result
  alert(`THE RESULTS ARE IN! ${username} you scored ${score}/${questions}`);
