@@ -2,16 +2,35 @@ html{
   height: 100%;
 }
 body{
-  width: 90%;
-  height: 90%;
+  margin: 10px;
   background-color: #3a3838;
-   /* background-image: url (/Users/drewferris/Aaron201/CF201-Lab2/project-directory/img/hangloosejpg);  */
   background-size: cover;
   color: #ffffff;
   font-size:18px;
   padding: 20px;
 }
-
+img{
+  float: right;
+  width: 300px;
+  padding:5px;
+}
+ol{
+  list-style-position: inside;
+  list-style-type: lower-greek;
+}
+ul{
+  list-style-type: square;
+  list-style-position: inside;
+}
+#UPlist{
+  text-indent: 50px;
+}
+#biosection{
+  display: inline;
+}
+#bio{
+  text-align: center;
+}
 #mytitle{ 
   text-align: center;
   font-size: 100px;
@@ -22,12 +41,17 @@ body{
   color:#000000;
 }
 h2{
+  font-size: 30px;
+}
+h3{
   font-size: 20px;
 }
 .QandA{
   font-size: 25px;
 }
-
+.answer{
+  color: #1ec707;
+}
 .proper{
 font-style: italic;
 }
