@@ -9,6 +9,12 @@ body{
   font-size:18px;
   padding: 20px;
 }
+h2{
+  font-size: 30px;
+}
+h3{
+  font-size: 20px;
+}
 img{
   float: right;
   width: 300px;
@@ -40,12 +46,6 @@ ul{
   font-family: cursive;
   color:#000000;
 }
-h2{
-  font-size: 30px;
-}
-h3{
-  font-size: 20px;
-}
 .QandA{
   font-size: 25px;
 }
@@ -57,5 +57,4 @@ font-style: italic;
 }
 .YorN{font-style: bold;
   color: #fd0000;
-
 }
