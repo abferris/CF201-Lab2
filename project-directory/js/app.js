@@ -126,7 +126,7 @@ questions ++;
 
 for (var j=6; j>0; j--){
    console.log('attempts', j);
-   var ansSeven = prompt(`What are one of the peices of my favorite meal my parents make? You have ${j} attempts left.`);.toUpperCase();
+   var ansSeven = prompt(`What are one of the peices of my favorite meal my parents make? You have ${j} attempts left.`).toUpperCase();
 
    console.log ('Answer 7', ansSeven);
 
