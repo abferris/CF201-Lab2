@@ -97,47 +97,47 @@ if (ansFive === 'YES' || ansFive === 'Y'){
   console.log('Result 5', resultFive);
  alert(`${resultFive} No. If you know anything about me, I am a glutton for punishment! I enjoy playing magic-users, as knowing and managing your spells is often more complex and difficult. However dumb characters can be played in VERY fun ways.`); //STRING INTERPOLATION help from Billy who got it from code academy
 
-for(var i=4; i>0; i--) {
-   console.log('attempts', i);
+for(var i=4; i>0; i--) { //loop for attempts
+   console.log('attempts', i); // log tries
 
    var ansSix = prompt(`Question Six: How old am I? You currently have ${i} attempts left.`);//question six
-   console.log('Answer 6',ansSix);
+   console.log('Answer 6',ansSix); //log answer
    ansSix = parseInt(ansSix);
-   if (ansSix === 27){
+   if (ansSix === 27){ //if correct
       alert('Correct!');
       score ++;
       i=0;
       console.log('Question 6', 'Correct');
    } else
-   if (ansSix<27){
+   if (ansSix<27){ // if high
       alert('Too Low Joe!');
       console.log('Question 6', 'Wrong');
 
    }else
-   if (ansSix>27){
+   if (ansSix>27){ // if low
       alert('Too high guy!');
       console.log('Question 6', 'Wrong');
-   } else{
+   } else{ //invalid answer
       alert('Invalid answer fool!');
       console.log('Question 6', 'Wrong');
    }
 }
 questions ++;
 
-for (var j=6; j>0; j--){
-   console.log('attempts', j);
-   var ansSeven = prompt(`What are one of the peices of my favorite meal my parents make? You have ${j} attempts left.`).toUpperCase();
+for (var j=6; j>0; j--){ // counter
+   console.log('attempts', j); //log tries
+   var ansSeven = prompt(`What are one of the peices of my favorite meal my parents make? You have ${j} attempts left.`).toUpperCase(); //seventh question
 
-   console.log ('Answer 7', ansSeven);
+   console.log ('Answer 7', ansSeven); // log answer seven
 
-   for (var k=0; k<foods.length; k++){
-      console.log('test',foods[k]);
-      if ( ansSeven === foods[k] ) {
+   for (var k=0; k<foods.length; k++){// loop for running answer against arrays
+      console.log('test',foods[k]);// log which foods it looked at
+      if ( ansSeven === foods[k] ) {//is check against part of array
    
-   alert('Correct!');
-   score ++;
-   j=0;
+   alert('Correct!');// good job
+   score ++; 
+   j=0;// end first for loop
       }
    }
 }
- alert(`THE RESULTS ARE IN! ${username} you scored ${score}/${questions}`);
+ alert(`THE RESULTS ARE IN! ${username} you scored ${score}/${questions}`);// result
