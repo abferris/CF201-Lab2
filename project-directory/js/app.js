@@ -16,6 +16,18 @@ var score = 0;
 var questions = 0;
 var foods = ['PESTO', 'PESTO PASTA', 'GARLIC BREAD', 'RED WINE', 'WINE'];
 
+var quest = ['My name is Aaron Blake Ferris.', 'I am the oldest of three children.', 'My two older brothers are named Drew and Reed. As my father and grandmother are both teachers, I was almost named Wright.', 'I have played ultimate at a competitive level, known as club. I also currently enjoy giving back to the ultimate community by coaching teams my at alma mater Eckstein Middle School.', 'I play Dungeons and Dragons! I prefer to play hack and slash fighting characters to make things as simple as possible.'];
+
+var correctOne = ['YES', 'NO', 'YES', 'NO', 'NO'];
+var correctTwo = ['Y', 'N', 'Y', 'N', 'N'];
+
+var wrongOne = ['NO', 'YES', 'NO', 'YES', 'YES'];
+var wrongTwo = ['N', 'Y', 'N', 'Y', 'Y'];
+
+var response = ['Yes it is.', 'No. I am the youngest of three.', 'Yes. Thank goodness they decided otherwise, which kept me from much childhood teasing. Now Key and Peel have opened that can of worms for my name', 'No. Unfortunatly life gets in the way. Codefellows is busy enough that I do not have the time to commit to something like that during the school day. You should know that!', 'No. If you know anything about me, I am a glutton for punishment! I enjoy playing magic-users, as knowing and managing your spells is often more complex and difficult. However dumb characters can be played in VERY fun ways.'];
+
+
+
 function questionOne() {
 
 //question 1
