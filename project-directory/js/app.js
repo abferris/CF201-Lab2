@@ -98,7 +98,7 @@ if (ansFive === 'YES' || ansFive === 'Y'){
  alert(`${resultFive} No. If you know anything about me, I am a glutton for punishment! I enjoy playing magic-users, as knowing and managing your spells is often more complex and difficult. However dumb characters can be played in VERY fun ways.`); //STRING INTERPOLATION help from Billy who got it from code academy
 
 for(var i=4; i>0; i--) {
-   console.log('attempts', i)
+   console.log('attempts', i);
 
    var ansSix = prompt(`Question Six: How old am I? You currently have ${i} attempts left.`);//question six
    console.log('Answer 6',ansSix);
@@ -125,19 +125,19 @@ for(var i=4; i>0; i--) {
 questions ++;
 
 for (var j=6; j>0; j--){
-   console.log('attempts', j)
-   var ansSeven = prompt(`What are one of the peices of my favorite meal my parents make? You have ${j} attempts left.`).toUpperCase();
+   console.log('attempts', j);
+   var ansSeven = prompt(`What are one of the peices of my favorite meal my parents make? You have ${j} attempts left.`);.toUpperCase();
 
-   console.log ('Answer 7', ansSeven)
+   console.log ('Answer 7', ansSeven);
 
    for (var k=0; k<foods.length; k++){
-      console.log('test',foods[k])
-if ( ansSeven === foods[k] ) {
+      console.log('test',foods[k]);
+      if ( ansSeven === foods[k] ) {
    
    alert('Correct!');
    score ++;
    j=0;
+      }
    }
-}
 }
  alert(`THE RESULTS ARE IN! ${username} you scored ${score}/${questions}`);
