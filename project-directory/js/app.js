@@ -24,128 +24,34 @@ var correctTwo = ['Y', 'N', 'Y', 'N', 'N'];
 var wrongOne = ['NO', 'YES', 'NO', 'YES', 'YES'];
 var wrongTwo = ['N', 'Y', 'N', 'Y', 'Y'];
 
-var response = ['Yes it is.', 'No. I am the youngest of three.', 'Yes. Thank goodness they decided otherwise, which kept me from much childhood teasing. Now Key and Peel have opened that can of worms for my name', 'No. Unfortunatly life gets in the way. Codefellows is busy enough that I do not have the time to commit to something like that during the school day. You should know that!', 'No. If you know anything about me, I am a glutton for punishment! I enjoy playing magic-users, as knowing and managing your spells is often more complex and difficult. However dumb characters can be played in VERY fun ways.'];
+var response = ['Yes it is.', 'No. I am the youngest of three.', 'Yes. Thank goodness they decided otherwise, which kept me from much childhood teasing. Now Key and Peel have opened that can of worms for my name.', 'No. Unfortunatly life gets in the way. Codefellows is busy enough that I do not have the time to commit to something like that during the school day. You should know that!', 'No. If you know anything about me, I am a glutton for punishment! I enjoy playing magic-users, as knowing and managing your spells is often more complex and difficult. However dumb characters can be played in VERY fun ways.'];
 
 
 
-function questionOne() {
+function qOneFive() {
 
-//question 1
-var ansOne = prompt('Question One: My name is Aaron Blake Ferris. Is this true? Yes or no?' ).toUpperCase(); 
-console.log('Answer 1',ansOne); 
+for (var i=0; i<5; i++){
+   var j= i+1 ;
+   
+   var ans = prompt( 'Question ' + j + ': ' + quest[i] + 'Is this true? Yes or no?').toUpperCase();
+   console.log('Answer' + j, ans);
+   if (ans === correctOne[i] || ans === correctTwo[i]) {
+      result = 'Correct!';
+         score++ ;
+   } else
+   if  (ans === wrongOne[i] || ans === wrongTwo[i]) {
+      result = 'Wrong!';
+   } else{
+      result = "Invalid Answer!";
+   }
+   questions++;
 
-if (ansOne === 'YES' || ansOne === 'Y'){
-   resultOne = 'Correct!';
-   score++ ;
-} else if (ansOne === 'NO' || ansOne === 'N'){
-     resultOne = "Wrong!";
-  }else{
-   resultOne = "Invalid Answer!";
-  }
-  questions ++;
-  
-  console.log('Score', `${score}/${questions} `);
-  console.log('Result 1', resultOne);
-//STRING INTERPOLATION help from Billy who got it from code academy
- alert(`${resultOne} Yes it is.`); 
-//end question 1
+   console.log('Score', `${score}/${questions}`);
+   console.log('Result'+ j, result);
+   alert(`${result} ${response[i]}`);
 }
-questionOne();
-
-function questionTwo() {
-
-//question 2
- var ansTwo = prompt('Question Two: I am the oldest of three children. Is this true? Yes or no?').toUpperCase(); 
-console.log('Answer 2',ansTwo); 
-
-if (ansTwo === 'YES' || ansTwo === 'Y'){
-   resultTwo = 'Wrong!';
-} else if (ansTwo === 'NO' || ansTwo === 'N'){
-     resultTwo = "Correct!";
-     score++;
-  }else{
-   resultTwo = "Invalid Answer!";
-  }
-  questions ++;
-  
-  console.log('Score', `${score}/${questions} `);
-  console.log('Result 2', resultTwo);
-  alert(`${resultTwo} No. I am the youngest of three.`);
-  //end question 2
 }
-questionTwo();
-
-function questionThree() {
-
- //question 3
- var ansThree = prompt('Question Three: My two older brothers are named Drew and Reed. As my father and grandmother are both teachers, I was almost named Wright. Is this true? Yes or no?').toUpperCase(); 
-console.log('Answer 3',ansThree); 
-
-if (ansThree === 'YES' || ansThree === 'Y'){
-   resultThree = 'Correct!';
-   score ++;
-} else if (ansThree === 'NO' || ansThree === 'N'){
-     resultThree = "Wrong!";
-  }else{
-   resultThree = "Invalid Answer!";
-  }
-  questions ++;
- 
-  console.log('Score', `${score}/${questions} `);
-  console.log('Result 3', resultThree);
- 
-  alert(`${resultThree} Yes. Thank goodness they decided otherwise, which kept me from much childhood teasing. Now Key and Peel have opened that can of worms for my name`);
-  //end question 3
-}
-questionThree();
-
-function questionFour() {
-
- //question 4
- var ansFour = prompt('Question Four: I have played ultimate at a competitive level, known as club. I also currently enjoy giving back to the ultimate community by coaching teams my at alma mater Eckstein Middle School. Is this true? Yes or no?').toUpperCase(); 
-console.log('Answer 4',ansFour); 
-
-if (ansFour === 'YES' || ansFour === 'Y'){
-   resultFour = 'Wrong!';
-} else if (ansFour === 'NO' || ansFour === 'N'){
-     resultFour = "Correct!";
-     score++;
-  }else{
-   resultFour = "Invalid Answer!";
-  }
-  questions ++;
-
-  console.log('Score', `${score}/${questions} `);
-  console.log('Result 4', resultFour);
-
- alert(`${resultFour} No. Unfortunatly life gets in the way. Codefellows is busy enough that I do not have the time to commit to something like that during the school day. You should know that!`); 
- //end question 4
-}
-questionFour();
-
-function questionFive() {
-
- //question 5
- var ansFive = prompt('Question Five: I play Dungeons and Dragons! I prefer to play hack and slash fighting characters to make things as simple as possible. Is this true? Yes or no?').toUpperCase(); 
-console.log('Answer 5',ansFive); 
-
-if (ansFive === 'YES' || ansFive === 'Y'){
-   resultFive = 'Wrong!';
-} else if (ansFive === 'NO' || ansFive === 'N'){
-     resultFive = "Correct!";
-     score ++;
-  }else{
-   resultFive = "Invalid Answer!";
-  }
-  questions ++;
-
-  console.log('Score', `${score}/${questions} `);
-  console.log('Result 5', resultFive);
-
-  alert(`${resultFive} No. If you know anything about me, I am a glutton for punishment! I enjoy playing magic-users, as knowing and managing your spells is often more complex and difficult. However dumb characters can be played in VERY fun ways.`); 
-  //end question 5
-}
-questionFive();
+qOneFive();
 
 function questionSix() {
 
@@ -183,7 +89,7 @@ questions ++;
 questionSix();
 
 function questionSeven() {
-
+ questions++;
 //question 7
 // counter
 for (var j=6; j>0; j--){ 
