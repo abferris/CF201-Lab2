@@ -7,7 +7,24 @@ body{
   background-size: cover;
   color: #ffffff;
   font-size:18px;
-  padding: 20px;
+  margin: 20px;
+  line-height: 20px;
+}
+#edu{
+  box-align: left;
+  width: 40%;
+  display: inline-block;
+  margin: 10px;
+}
+#exp{
+  float: right;
+  width: 50%;
+  margin: 10px;
+}
+#phil{
+  display: block;
+  padding: 30px;
+  margin :30px;
 }
 h2{
   font-size: 30px;
@@ -19,7 +36,8 @@ h3{
 img{
   float: right;
   width: 300px;
-  padding:5px;
+  padding:15px;
+  padding-bottom: 15px;
 }
 p{
   padding: 5px;
@@ -37,18 +55,22 @@ ul{
 }
 #biosection{
   display: inline;
+  padding-bottom: 20px;
 }
 #bio{
   text-align: center;
+  padding-bottom: 30px;
 }
 #mytitle{ 
   text-align: center;
   font-size: 100px;
   display: block;
   padding: 10px;
-  margin: auto;
   font-family: cursive;
   color:#000000;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  padding-top: 60px;
 }
 .QandA{
   font-size: 25px;

@@ -2,7 +2,7 @@
 alert('Welcome to the quick quiz about me! My name is Aaron, and I hope that you have a lot of fun here!');
 //username prompt
 var username = prompt('What is your name?')
-console.log('name',name)
+console.log('name', name)
 
 //variables
 var resultOne;
@@ -31,98 +31,98 @@ var response = ['Yes it is.', 'No. I am the youngest of three.', 'Yes. Thank goo
 
 //name of the function
 function qOneFive() {
-//counter starts at 0 and once it hits 5 it stops. increment by 1
-for (var i=0; i<5; i++){
-   //this variable is one larger than counter, used for question number on the console logs and question prompt.
-   var j= i+1 ;
-   //prompt:   question # (from j)   position of quest varible from counter   to upper case
-   var ans = prompt( 'Question ' + j + ': ' + quest[i] + 'Is this true? Yes or no?').toUpperCase();
-   //log ans with label of 'answer # (from j)'
-   console.log('Answer' + j, ans);
-   //if ans= correct condition 1 or correct condition 2 from cou t
-   if (ans === correctOne[i] || ans === correctTwo[i]) {
-      //result correct and their score goes up
-      result = 'Correct!';
-         score++ ;
-   } else
-   //if ans = wrong answer 1 or wrong answer 2 from counter
-   if  (ans === wrongOne[i] || ans === wrongTwo[i]) {
-      //make result wrong
-      result = 'Wrong!';
-   } else{
-      //make result invlaid answer
-      result = "Invalid Answer!";
+   //counter starts at 0 and once it hits 5 it stops. increment by 1
+   for (var i = 0; i < 5; i++) {
+      //this variable is one larger than counter, used for question number on the console logs and question prompt.
+      var j = i + 1;
+      //prompt:   question # (from j)   position of quest varible from counter   to upper case
+      var ans = prompt('Question ' + j + ': ' + quest[i] + 'Is this true? Yes or no?').toUpperCase();
+      //log ans with label of 'answer # (from j)'
+      console.log('Answer' + j, ans);
+      //if ans= correct condition 1 or correct condition 2 from cou t
+      if (ans === correctOne[i] || ans === correctTwo[i]) {
+         //result correct and their score goes up
+         result = 'Correct!';
+         score++;
+      } else
+         //if ans = wrong answer 1 or wrong answer 2 from counter
+         if (ans === wrongOne[i] || ans === wrongTwo[i]) {
+            //make result wrong
+            result = 'Wrong!';
+         } else {
+            //make result invlaid answer
+            result = "Invalid Answer!";
+         }
+      //push questions counter
+      questions++;
+      //log their score/total questions and the results
+      console.log('Score', `${score}/${questions}`);
+      console.log('Result' + j, result);
+      // display result from loop and response from variable in position from counter
+      alert(`${result} ${response[i]}`);
    }
-   //push questions counter
-   questions++;
-   //log their score/total questions and the results
-   console.log('Score', `${score}/${questions}`);
-   console.log('Result'+ j, result);
-   // display result from loop and response from variable in position from counter
-   alert(`${result} ${response[i]}`);
-}
 }
 //call the variable
 qOneFive();
 
 function questionSix() {
 
-  //question 6
-//loop for attempts
-for(var i=4; i>0; i--) { 
-   console.log('attempts', i); 
+   //question 6
+   //loop for attempts
+   for (var i = 4; i > 0; i--) {
+      console.log('attempts', i);
 
-   var ansSix = prompt(`Question Six: How old am I? You currently have ${i} attempts left.`);
-   console.log('Answer 6',ansSix); 
-   ansSix = parseInt(ansSix);
+      var ansSix = prompt(`Question Six: How old am I? You currently have ${i} attempts left.`);
+      console.log('Answer 6', ansSix);
+      ansSix = parseInt(ansSix);
 
-   if (ansSix === 27){ //if correct
-      alert('Correct!');
-      score ++;
-      i=0;
-      console.log('Question 6', 'Correct');
-   } else
-   if (ansSix<27){ // if high
-      alert('Too Low Joe!');
-      console.log('Question 6', 'Wrong');
+      if (ansSix === 27) { //if correct
+         alert('Correct!');
+         score++;
+         i = 0;
+         console.log('Question 6', 'Correct');
+      } else
+      if (ansSix < 27) { // if high
+         alert('Too Low Joe!');
+         console.log('Question 6', 'Wrong');
 
-   }else
-   if (ansSix>27){ // if low
-      alert('Too high guy!');
-      console.log('Question 6', 'Wrong');
-   } else{ //invalid answer
-      alert('Invalid answer fool!');
-      console.log('Question 6', 'Wrong');
+      } else
+      if (ansSix > 27) { // if low
+         alert('Too high guy!');
+         console.log('Question 6', 'Wrong');
+      } else { //invalid answer
+         alert('Invalid answer fool!');
+         console.log('Question 6', 'Wrong');
+      }
    }
-}
-questions ++;
-//end question 6
+   questions++;
+   //end question 6
 }
 questionSix();
 
 function questionSeven() {
- questions++;
-//question 7
-// counter
-for (var j=6; j>0; j--){ 
-   console.log('attempts', j); 
-   var ansSeven = prompt(`What are one of the peices of my favorite meal my parents make? You have ${j} attempts left.`).toUpperCase(); 
-   console.log ('Answer 7', ansSeven); 
+   questions++;
+   //question 7
+   // counter
+   for (var j = 6; j > 0; j--) {
+      console.log('attempts', j);
+      var ansSeven = prompt(`What are one of the peices of my favorite meal my parents make? You have ${j} attempts left.`).toUpperCase();
+      console.log('Answer 7', ansSeven);
 
-   // loop for running answer against arrays
-   for (var k=0; k<foods.length; k++){
-      //log foods checked against
-      console.log('test',foods[k]);
-      if ( ansSeven === foods[k] ) {
-   alert('Correct!');
-   score ++; 
-   j=0;// end first for loop
+      // loop for running answer against arrays
+      for (var k = 0; k < foods.length; k++) {
+         //log foods checked against
+         console.log('test', foods[k]);
+         if (ansSeven === foods[k]) {
+            alert('Correct!');
+            score++;
+            j = 0; // end first for loop
+         }
       }
    }
-}
-//end questions 7
+   //end questions 7
 }
 questionSeven();
 
 // result
- alert(`THE RESULTS ARE IN! ${username} you scored ${score}/${questions}`);
+alert(`THE RESULTS ARE IN! ${username} you scored ${score}/${questions}`);
