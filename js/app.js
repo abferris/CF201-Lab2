@@ -1,4 +1,5 @@
 //intro
+'use strict';
 alert('Welcome to the quick quiz about me! My name is Aaron, and I hope that you have a lot of fun here!');
 //username prompt
 var username = prompt('What is your name?')
